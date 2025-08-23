@@ -29,7 +29,9 @@
           <img class="w-12" src="./assets/Group.png" alt="logo image" />
         </div>
         <div>
-          <p class="font-bold text-black text-xl">$ <span>45000</span></p>
+          <p class="font-bold text-black text-xl">
+            $ <span id="available-amount">45000</span>
+          </p>
           <p class="text-gray-500">Available Balance</p>
         </div>
       </div>
@@ -108,7 +110,7 @@
       <div class="bg-white rounded-xl p-3">
         <fieldset class="fieldset">
           <legend class="fieldset-legend text-base">Select A Bank</legend>
-          <select class="select bg-[#F4F5F7] rounded-2xl w-[95%]">
+          <select id="bank" class="select bg-[#F4F5F7] rounded-2xl w-[95%]">
             <option disabled selected class="text-gray-400">Select Bank</option>
             <option>AB Bank</option>
             <option>Ismalic Bank</option>
@@ -121,6 +123,7 @@
           <input
             type="text"
             class="input text-gray-400 bg-[#F4F5F7] rounded-2xl w-[95%]"
+            id="account-num"
             placeholder="Enter 11 digit account number"
           />
         </fieldset>
@@ -130,22 +133,26 @@
             type="text"
             class="input text-gray-400 bg-[#F4F5F7] rounded-2xl w-[95%]"
             placeholder="Add Amount to withdraw"
+            id="add-money"
           />
         </fieldset>
         <fieldset class="fieldset mt-3">
           <legend class="fieldset-legend text-base">Pin Number</legend>
           <input
-            type="text"
+            id="pin"
+            type="password"
             class="input text-gray-400 bg-[#F4F5F7] rounded-2xl w-[95%]"
             placeholder="Enter 4 digit pin number"
           />
         </fieldset>
         <button
+          id="add-money-btn"
           class="btn mt-5 mb-5 w-[95%] text-white bg-[#0874F2] rounded-2xl"
         >
           Add Money
         </button>
       </div>
     </section>
+    <script src="./home.js"></script>
   </body>
 </html>
