@@ -165,7 +165,44 @@
         </div>
       </section>
       <!-- cash out -->
-      <section id="cash-out-parent"><h1>Cash Out</h1></section>
+      <section id="cash-out-parent" class="hidden">
+        <h1 class="text-xl mt-5 mb-5 font-semibold text-black">Cash Out</h1>
+        <div class="bg-white rounded-xl p-3">
+          <fieldset class="fieldset mt-3">
+            <legend class="fieldset-legend text-base">Agent Number</legend>
+            <input
+              type="text"
+              class="input text-gray-400 bg-[#F4F5F7] rounded-2xl w-[95%]"
+              id="agent-num"
+              placeholder="Enter 11 digit number"
+            />
+          </fieldset>
+          <fieldset class="fieldset mt-3">
+            <legend class="fieldset-legend text-base">Amount</legend>
+            <input
+              type="text"
+              class="input text-gray-400 bg-[#F4F5F7] rounded-2xl w-[95%]"
+              placeholder="Enter amount to withdraw"
+              id="withdraw-amount"
+            />
+          </fieldset>
+          <fieldset class="fieldset mt-3">
+            <legend class="fieldset-legend text-base">Pin Number</legend>
+            <input
+              id="pin-withdraw"
+              type="password"
+              class="input text-gray-400 bg-[#F4F5F7] rounded-2xl w-[95%]"
+              placeholder="Enter 4 digit pin number"
+            />
+          </fieldset>
+          <button
+            id="withdraw-btn"
+            class="btn mt-5 mb-5 w-[95%] text-white bg-[#0874F2] rounded-2xl"
+          >
+            Withdraw Money
+          </button>
+        </div>
+      </section>
     </div>
     <script src="./home.js"></script>
   </body>
