@@ -98,6 +98,7 @@
         </div>
         <!-- card -->
         <div
+          id="pay-bill-btn"
           class="border-2 border-gray-100 p-3 rounded-xl flex-col justify-center items-center"
         >
           <img src="./assets/purse1.png" class="mx-auto" alt="" />
@@ -281,7 +282,64 @@
         </div>
       </section>
       <!-- Pay Bill -->
-      <section id="pay-bill-parent "></section>
+      <section id="pay-bill-parent" class="hidden">
+        <!-- <section id="add-money-parent" > -->
+        <h1 class="max-w-[350px] text-xl mt-5 mb-5 font-semibold text-black">
+          Pay Bill
+        </h1>
+        <div class="bg-white rounded-xl p-3">
+          <fieldset class="fieldset">
+            <legend class="fieldset-legend text-base">Select To Pay</legend>
+            <select
+              id="bank-pay"
+              class="select bg-[#F4F5F7] rounded-2xl w-[95%]"
+            >
+              <option disabled selected class="text-gray-400">
+                Select Bank
+              </option>
+              <option>AB Bank</option>
+              <option>Ismalic Bank</option>
+              <option>Duch Bangla Bank</option>
+            </select>
+          </fieldset>
+
+          <fieldset class="fieldset mt-3">
+            <legend class="fieldset-legend text-base">
+              Biller Account Number
+            </legend>
+            <input
+              type="text"
+              class="input text-gray-400 bg-[#F4F5F7] rounded-2xl w-[95%]"
+              id="biller-account-num"
+              placeholder="Enter account number"
+            />
+          </fieldset>
+          <fieldset class="fieldset mt-3">
+            <legend class="fieldset-legend text-base">Amount to pay</legend>
+            <input
+              type="text"
+              class="input text-gray-400 bg-[#F4F5F7] rounded-2xl w-[95%]"
+              placeholder="Add Amount to pay"
+              id="pay-money"
+            />
+          </fieldset>
+          <fieldset class="fieldset mt-3">
+            <legend class="fieldset-legend text-base">Pin Number</legend>
+            <input
+              id="pin-pay"
+              type="password"
+              class="input text-gray-400 bg-[#F4F5F7] rounded-2xl w-[95%]"
+              placeholder="Enter 4 digit pin number"
+            />
+          </fieldset>
+          <button
+            id="pay-btn"
+            class="btn mt-5 mb-5 w-[95%] text-white bg-[#0874F2] rounded-2xl"
+          >
+            Pay Now
+          </button>
+        </div>
+      </section>
     </div>
     <script src="./home.js"></script>
   </body>

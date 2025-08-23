@@ -70,6 +70,28 @@ document.getElementById('send-now-btn').addEventListener('click',function(){
    
    document.getElementById('available-amount').innerText=afterSendMoneyAvailableAmount;
 })
+
+//pay bill
+document.getElementById('pay-btn').addEventListener('click',function(){
+
+
+      const availableAmount=parseInt(document.getElementById('available-amount').innerText);
+      const sendAmount=parseInt(document.getElementById('pay-money').value)
+      const payPinNum=parseInt(document.getElementById('pin-pay').value);
+      const accountNum=parseInt(document.getElementById('account-num').value);
+    //   if (accountNum.length !== 11) {
+    //     alert('Please provide valid account number');
+    //     return;
+    //   }
+       if (validPin !== payPinNum) {
+        alert('Incorrect Pin Number');
+        return;
+    }
+      const payAmount=availableAmount-sendAmount;
+     console.log(payAmount);
+   
+   document.getElementById('available-amount').innerText=payAmount;
+})
 //toggling 
 
 document.getElementById('add-btn').addEventListener('click',function () {
@@ -93,6 +115,7 @@ document.getElementById('cash-out-btn').addEventListener('click',function () {
     document.getElementById('cash-out-parent').style.display='block';
     document.getElementById('add-money-parent').style.display='none';
     document.getElementById('transfer-parent').style.display='none';
+      document.getElementById('pay-bill-parent').style.display='none';
     //style
 
     document.getElementById('cash-out-btn').style.border='1px solid blue';
@@ -108,7 +131,7 @@ document.getElementById('transfer-btn').addEventListener('click',function(){
             document.getElementById('transfer-parent').style.display='block';
             document.getElementById('add-money-parent').style.display='none';
             document.getElementById('cash-out-parent').style.display='none';
-    
+      document.getElementById('pay-bill-parent').style.display='none';
       //style
 
 
@@ -118,6 +141,19 @@ document.getElementById('transfer-btn').addEventListener('click',function(){
 document.getElementById('get-bonus-btn-parent').addEventListener('click',function(){
    
             document.getElementById('bonus-parent').style.display='block';
+            document.getElementById('transfer-parent').style.display='none';
+            document.getElementById('add-money-parent').style.display='none';
+            document.getElementById('cash-out-parent').style.display='none';
+     document.getElementById('pay-bill-parent').style.display='none';
+      //style
+
+
+
+});
+document.getElementById('pay-bill-btn').addEventListener('click',function(){
+   
+            document.getElementById('pay-bill-parent').style.display='block';
+            document.getElementById('bonus-parent').style.display='none';
             document.getElementById('transfer-parent').style.display='none';
             document.getElementById('add-money-parent').style.display='none';
             document.getElementById('cash-out-parent').style.display='none';
