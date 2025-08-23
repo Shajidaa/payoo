@@ -34,7 +34,7 @@ document.getElementById('withdraw-btn').addEventListener('click',function () {
     const withdrawAmount=parseInt(document.getElementById('withdraw-amount').value);
       const availableAmount=parseInt(document.getElementById('available-amount').innerText);
     const pinNum=parseInt(document.getElementById('pin-withdraw').value);
-    // if (agentNumber.length !== 11 ) {
+    // if (agentNumber.length != 11 ) {
     //     alert('Please provide valid account number');
     //     return;
     // }
@@ -44,12 +44,31 @@ document.getElementById('withdraw-btn').addEventListener('click',function () {
     }
     //cALCULATION
     const afterWithdrawNewAvailableAmount=availableAmount-withdrawAmount;
-   console.log(withdrawAmount);
-   console.log(availableAmount);
+
    
    console.log(afterWithdrawNewAvailableAmount);
    
    document.getElementById('available-amount').innerText=afterWithdrawNewAvailableAmount;
+})
+//Transfer money
+document.getElementById('send-now-btn').addEventListener('click',function(){
+
+      const availableAmount=parseInt(document.getElementById('available-amount').innerText);
+      const sendAmount=parseInt(document.getElementById('send-amount').value)
+      const pinNum=parseInt(document.getElementById('pin-transfer').value);
+      const accountNum=parseInt(document.getElementById('account-num').value);
+    //   if (accountNum.length !== 11) {
+    //     alert('Please provide valid account number');
+    //     return;
+    //   }
+       if (validPin !== pinNum) {
+        alert('Incorrect Pin Number');
+        return;
+    }
+      const afterSendMoneyAvailableAmount=availableAmount-sendAmount;
+     console.log(afterSendMoneyAvailableAmount);
+   
+   document.getElementById('available-amount').innerText=afterSendMoneyAvailableAmount;
 })
 //toggling 
 
@@ -58,6 +77,7 @@ document.getElementById('add-btn').addEventListener('click',function () {
         
     document.getElementById('add-money-parent').style.display='block';
      document.getElementById('cash-out-parent').style.display='none';
+      document.getElementById('transfer-parent').style.display='none';
      //style
     document.getElementById('add-btn').style.border='1px solid blue';
      document.getElementById('cash-out-btn').style.border='1px solid  rgba(169, 169, 169, 0.3)';
@@ -71,6 +91,7 @@ document.getElementById('cash-out-btn').addEventListener('click',function () {
     
     document.getElementById('cash-out-parent').style.display='block';
     document.getElementById('add-money-parent').style.display='none';
+    document.getElementById('transfer-parent').style.display='none';
     //style
 
     document.getElementById('cash-out-btn').style.border='1px solid blue';
@@ -79,3 +100,29 @@ document.getElementById('cash-out-btn').addEventListener('click',function () {
     document.getElementById('cash-out-text').style.color='blue';
     
 })
+
+
+document.getElementById('transfer-btn').addEventListener('click',function(){
+   
+            document.getElementById('transfer-parent').style.display='block';
+            document.getElementById('add-money-parent').style.display='none';
+            document.getElementById('cash-out-parent').style.display='none';
+    
+      //style
+
+
+
+});
+
+document.getElementById('get-bonus-btn-parent').addEventListener('click',function(){
+   
+            document.getElementById('bonus-parent').style.display='block';
+            document.getElementById('transfer-parent').style.display='none';
+            document.getElementById('add-money-parent').style.display='none';
+            document.getElementById('cash-out-parent').style.display='none';
+    
+      //style
+
+
+
+});

@@ -20,30 +20,31 @@
       referrerpolicy="no-referrer"
     />
   </head>
-  <body class="bg-[#F4F5F7] p-3 max-w-[350px] mx-auto">
+  <body class="bg-[#F4F5F7] mx-auto font-[outfit]">
     <nav
-      class="bg-white pb-2 border-b-2 border-b-gray-100 flex justify-between items-center"
+      class="bg-white pb-2 md:max-w-[350px] max-w-full mx-auto p-3 border-b-1 border-b-gray-300 flex justify-between items-center"
     >
       <div class="flex gap-3">
         <div>
           <img class="w-12" src="./assets/Group.png" alt="logo image" />
         </div>
         <div>
-          <p class="font-bold text-black text-xl">
+          <p class="font-bold text-black text-[18px]">
             $ <span id="available-amount">45000</span>
           </p>
-          <p class="text-gray-500">Available Balance</p>
+          <p class="text-gray-500 text-[14px]">Available Balance</p>
         </div>
       </div>
       <div>
-        <button class="btn rounded-xl text-gray-500">
-          <i class="fa-solid fa-arrow-right-from-bracket rotate-180"></i> Login
+        <button class="btn rounded-xl text-gray-500 text-[14px]">
+          <i class="fa-solid fa-arrow-right-from-bracket rotate-180"></i> Log
+          Out
         </button>
       </div>
     </nav>
-    <section class="bg-white">
-      <h1 class="font-bold text-black text-2xl mt-5">🔥 Welcome to Payooo!</h1>
-      <p class="text-gray-400">
+    <section class="bg-white md:max-w-[350px] max-w-full mx-auto p-3">
+      <h1 class="font-bold text-black text-2xl">🔥 Welcome to Payooo!</h1>
+      <p class="text-gray-400 text-base">
         Enjoy easy and convenient financial services with us. Cashout charge is
         low and
       </p>
@@ -57,7 +58,7 @@
           <img src="./assets/wallet1.png" class="mx-auto" alt="" />
           <p
             id="add-text"
-            class="font-semibold text-base text-gray-400 text-center"
+            class="font-normal text-[14px] text-gray-400 text-center"
           >
             Add money
           </p>
@@ -70,26 +71,28 @@
           <img src="./assets/send1.png" class="mx-auto" alt="" />
           <p
             id="cash-out-text"
-            class="font-semibold text-base text-gray-400 text-center"
+            class="font-normal text-[14px] text-gray-400 text-center"
           >
             Cash out
           </p>
         </div>
         <!-- card -->
         <div
+          id="transfer-btn"
           class="border-2 border-gray-100 p-3 rounded-xl flex-col justify-center items-center"
         >
           <img src="./assets/money1.png" class="mx-auto" alt="" />
-          <p class="font-semibold text-base text-gray-400 text-center">
+          <p class="font-normal text-[14px] text-gray-400 text-center">
             Transfer money
           </p>
         </div>
         <!-- card -->
         <div
+          id="get-bonus-btn-parent"
           class="border-2 border-gray-100 p-3 rounded-xl flex-col justify-center items-center"
         >
           <img src="./assets/bonus1.png" class="mx-auto" alt="" />
-          <p class="font-semibold text-base text-gray-400 text-center">
+          <p class="font-normal text-[14px] text-gray-400 text-center">
             Get Bonus
           </p>
         </div>
@@ -98,7 +101,7 @@
           class="border-2 border-gray-100 p-3 rounded-xl flex-col justify-center items-center"
         >
           <img src="./assets/purse1.png" class="mx-auto" alt="" />
-          <p class="font-semibold text-base text-gray-400 text-center">
+          <p class="font-normal text-[14px] text-gray-400 text-center">
             Pay bill
           </p>
         </div>
@@ -107,16 +110,18 @@
           class="border-2 border-gray-100 p-3 rounded-xl flex-col justify-center items-center"
         >
           <img src="./assets/transaction1.png" class="mx-auto" alt="" />
-          <p class="font-semibold text-base text-gray-400 text-center">
+          <p class="font-normal text-[14px] text-gray-400 text-center">
             Transaction
           </p>
         </div>
       </div>
     </section>
-    <div class="all-from-sections">
+    <div class="all-from-sections max-w-[350px] mx-auto p-3">
       <!-- add-money -->
       <section id="add-money-parent">
-        <h1 class="text-xl mt-5 mb-5 font-semibold text-black">Add Money</h1>
+        <h1 class="max-w-[350px] text-xl mt-5 mb-5 font-semibold text-black">
+          Add Money
+        </h1>
         <div class="bg-white rounded-xl p-3">
           <fieldset class="fieldset">
             <legend class="fieldset-legend text-base">Select A Bank</legend>
@@ -168,7 +173,7 @@
         </div>
       </section>
       <!-- cash out -->
-      <section id="cash-out-parent" class="hidden">
+      <section id="cash-out-parent" class="hidden max-w-[350px]">
         <h1 class="text-xl mt-5 mb-5 font-semibold text-black">Cash Out</h1>
         <div class="bg-white rounded-xl p-3">
           <fieldset class="fieldset mt-3">
@@ -206,6 +211,77 @@
           </button>
         </div>
       </section>
+
+      <!-- Transfer Money -->
+      <section id="transfer-parent" class="max-w-[350px] hidden">
+        <h1 class="text-xl mt-5 mb-5 font-semibold text-black">
+          Transfer Money
+        </h1>
+        <div class="bg-white rounded-xl p-3">
+          <fieldset class="fieldset mt-3">
+            <legend class="fieldset-legend text-base">
+              User Account Number
+            </legend>
+            <input
+              type="text"
+              class="input text-gray-400 bg-[#F4F5F7] rounded-2xl w-[95%]"
+              id="account-num"
+              placeholder="Enter 11 digit number"
+            />
+          </fieldset>
+          <fieldset class="fieldset mt-3">
+            <legend class="fieldset-legend text-base">Amount</legend>
+            <input
+              type="text"
+              class="input text-gray-400 bg-[#F4F5F7] rounded-2xl w-[95%]"
+              placeholder="Enter amount to withdraw"
+              id="send-amount"
+            />
+          </fieldset>
+          <fieldset class="fieldset mt-3">
+            <legend class="fieldset-legend text-base">Pin Number</legend>
+            <input
+              id="pin-transfer"
+              type="password"
+              class="input text-gray-400 bg-[#F4F5F7] rounded-2xl w-[95%]"
+              placeholder="Enter 4 digit pin number"
+            />
+          </fieldset>
+          <button
+            id="send-now-btn"
+            class="btn mt-5 mb-5 w-[95%] text-white bg-[#0874F2] rounded-2xl"
+          >
+            Send Now
+          </button>
+        </div>
+      </section>
+
+      <!-- get Bonus -->
+      <section id="bonus-parent" class="max-w-[350px] hidden">
+        <h1 class="text-xl mt-5 mb-5 font-semibold text-black">Get Bonus</h1>
+        <div class="bg-white rounded-xl p-3">
+          <fieldset class="fieldset mt-3">
+            <legend class="fieldset-legend text-base">
+              Enter Bonus Coupon
+            </legend>
+            <input
+              type="text"
+              class="input text-gray-400 bg-[#F4F5F7] rounded-2xl w-[95%]"
+              id="coupon"
+              placeholder="Enter your coupon"
+            />
+          </fieldset>
+
+          <button
+            id="get-bonus-btn"
+            class="btn mt-5 mb-5 w-[95%] text-white bg-[#0874F2] rounded-2xl"
+          >
+            Get Bonus
+          </button>
+        </div>
+      </section>
+      <!-- Pay Bill -->
+      <section id="pay-bill-parent "></section>
     </div>
     <script src="./home.js"></script>
   </body>
