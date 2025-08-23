@@ -55,7 +55,7 @@ document.getElementById('withdraw-btn').addEventListener('click',function () {
 
 document.getElementById('add-btn').addEventListener('click',function () {
 
-    
+        
     document.getElementById('add-money-parent').style.display='block';
      document.getElementById('cash-out-parent').style.display='none';
      //style
@@ -63,7 +63,7 @@ document.getElementById('add-btn').addEventListener('click',function () {
      document.getElementById('cash-out-btn').style.border='1px solid  rgba(169, 169, 169, 0.3)';
     document.getElementById('add-text').style.color='blue';
      document.getElementById('cash-out-text').style.color=' #9ca3af';
-   
+       
 })
 
 
