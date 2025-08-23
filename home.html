@@ -51,15 +51,20 @@
       <div class="mt-5 rounded-b-2xl grid grid-cols-3 gap-5 pb-5">
         <!-- card -->
         <div
+          id="add-btn"
           class="border-2 border-gray-100 p-3 rounded-xl flex-col justify-center items-center"
         >
           <img src="./assets/wallet1.png" class="mx-auto" alt="" />
-          <p class="font-semibold text-base text-gray-400 text-center">
+          <p
+            id="add-text"
+            class="font-semibold text-base text-gray-400 text-center"
+          >
             Add money
           </p>
         </div>
         <!-- card -->
         <div
+          id="cash-out-btn"
           class="border-2 border-gray-100 p-3 rounded-xl flex-col justify-center items-center"
         >
           <img src="./assets/send1.png" class="mx-auto" alt="" />
@@ -105,54 +110,63 @@
         </div>
       </div>
     </section>
-    <section>
-      <h1 class="text-xl mt-5 mb-5 font-semibold text-black">Add Money</h1>
-      <div class="bg-white rounded-xl p-3">
-        <fieldset class="fieldset">
-          <legend class="fieldset-legend text-base">Select A Bank</legend>
-          <select id="bank" class="select bg-[#F4F5F7] rounded-2xl w-[95%]">
-            <option disabled selected class="text-gray-400">Select Bank</option>
-            <option>AB Bank</option>
-            <option>Ismalic Bank</option>
-            <option>Duch Bangla Bank</option>
-          </select>
-        </fieldset>
+    <div class="all-from-sections">
+      <!-- add-money -->
+      <section id="add-money-parent">
+        <h1 class="text-xl mt-5 mb-5 font-semibold text-black">Add Money</h1>
+        <div class="bg-white rounded-xl p-3">
+          <fieldset class="fieldset">
+            <legend class="fieldset-legend text-base">Select A Bank</legend>
+            <select id="bank" class="select bg-[#F4F5F7] rounded-2xl w-[95%]">
+              <option disabled selected class="text-gray-400">
+                Select Bank
+              </option>
+              <option>AB Bank</option>
+              <option>Ismalic Bank</option>
+              <option>Duch Bangla Bank</option>
+            </select>
+          </fieldset>
 
-        <fieldset class="fieldset mt-3">
-          <legend class="fieldset-legend text-base">Bank Account Number</legend>
-          <input
-            type="text"
-            class="input text-gray-400 bg-[#F4F5F7] rounded-2xl w-[95%]"
-            id="account-num"
-            placeholder="Enter 11 digit account number"
-          />
-        </fieldset>
-        <fieldset class="fieldset mt-3">
-          <legend class="fieldset-legend text-base">Amount to Add</legend>
-          <input
-            type="text"
-            class="input text-gray-400 bg-[#F4F5F7] rounded-2xl w-[95%]"
-            placeholder="Add Amount to withdraw"
-            id="add-money"
-          />
-        </fieldset>
-        <fieldset class="fieldset mt-3">
-          <legend class="fieldset-legend text-base">Pin Number</legend>
-          <input
-            id="pin"
-            type="password"
-            class="input text-gray-400 bg-[#F4F5F7] rounded-2xl w-[95%]"
-            placeholder="Enter 4 digit pin number"
-          />
-        </fieldset>
-        <button
-          id="add-money-btn"
-          class="btn mt-5 mb-5 w-[95%] text-white bg-[#0874F2] rounded-2xl"
-        >
-          Add Money
-        </button>
-      </div>
-    </section>
+          <fieldset class="fieldset mt-3">
+            <legend class="fieldset-legend text-base">
+              Bank Account Number
+            </legend>
+            <input
+              type="text"
+              class="input text-gray-400 bg-[#F4F5F7] rounded-2xl w-[95%]"
+              id="account-num"
+              placeholder="Enter 11 digit account number"
+            />
+          </fieldset>
+          <fieldset class="fieldset mt-3">
+            <legend class="fieldset-legend text-base">Amount to Add</legend>
+            <input
+              type="text"
+              class="input text-gray-400 bg-[#F4F5F7] rounded-2xl w-[95%]"
+              placeholder="Add Amount to withdraw"
+              id="add-money"
+            />
+          </fieldset>
+          <fieldset class="fieldset mt-3">
+            <legend class="fieldset-legend text-base">Pin Number</legend>
+            <input
+              id="pin"
+              type="password"
+              class="input text-gray-400 bg-[#F4F5F7] rounded-2xl w-[95%]"
+              placeholder="Enter 4 digit pin number"
+            />
+          </fieldset>
+          <button
+            id="add-money-btn"
+            class="btn mt-5 mb-5 w-[95%] text-white bg-[#0874F2] rounded-2xl"
+          >
+            Add Money
+          </button>
+        </div>
+      </section>
+      <!-- cash out -->
+      <section id="cash-out-parent"><h1>Cash Out</h1></section>
+    </div>
     <script src="./home.js"></script>
   </body>
 </html>
