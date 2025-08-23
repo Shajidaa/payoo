@@ -54,17 +54,28 @@ document.getElementById('withdraw-btn').addEventListener('click',function () {
 //toggling 
 
 document.getElementById('add-btn').addEventListener('click',function () {
+
+    
     document.getElementById('add-money-parent').style.display='block';
+     document.getElementById('cash-out-parent').style.display='none';
+     //style
     document.getElementById('add-btn').style.border='1px solid blue';
-     document.getElementById('cash-out-btn').style.border=document.getElementById('cash-out-btn').style.border;
+     document.getElementById('cash-out-btn').style.border='1px solid  rgba(169, 169, 169, 0.3)';
     document.getElementById('add-text').style.color='blue';
-    document.getElementById('cash-out-parent').style.display='none';
+     document.getElementById('cash-out-text').style.color=' #9ca3af';
+   
 })
 
 
 document.getElementById('cash-out-btn').addEventListener('click',function () {
     
     document.getElementById('cash-out-parent').style.display='block';
-    document.getElementById('cash-out-btn').style.border='1px solid blue';
     document.getElementById('add-money-parent').style.display='none';
+    //style
+
+    document.getElementById('cash-out-btn').style.border='1px solid blue';
+     document.getElementById('add-btn').style.border='1px solid rgba(169, 169, 169, 0.3) ';
+      document.getElementById('add-text').style.color=' #9ca3af';
+    document.getElementById('cash-out-text').style.color='blue';
+    
 })
