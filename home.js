@@ -1,9 +1,18 @@
-const btn=document.getElementById('add-money-btn');
+//log out btn 
+document.getElementById(' log-out-btn')
+.addEventListener('click',function (e) {
+   e.preventDefault();
+      window.location.href='./index.html'
+})
+
 
 const validPin=1234;
 const transaction =[];
 
 
+
+
+const btn=document.getElementById('add-money-btn');
 // function to get input values
 function getInputValueNumber(id){
   const inputField=document.getElementById(id);
@@ -27,7 +36,18 @@ function setInnerText(value) {
   const availableBalance=document.getElementById('available-amount');
   availableBalance.innerText=value;
 }
+//function to toggle
+function handleToggle(id){
+const forms=document.getElementsByClassName('form');
+        for (const form  of forms) {
+          // console.log(form);
+          form.style.display='none';
+          
+        }
 
+    document.getElementById(id)
+    .style.display='block';
+}
 //add money features : 
 btn.addEventListener('click',function (e) {
   e.preventDefault();
@@ -62,7 +82,7 @@ name:'Add Money',
 time:new Date().toLocaleTimeString(),
    }
    transaction.push(data)
-  //  console.log(transaction);
+ 
    
    
 })
@@ -169,83 +189,45 @@ time:new Date().toLocaleTimeString(),
 //toggling 
 
 document.getElementById('add-btn').addEventListener('click',function (e) {
-        const forms=document.getElementsByClassName('form');
-        for (const form  of forms) {
-          // console.log(form);
-          form.style.display='none';
-          
-        }
+    
 
-    document.getElementById('add-money-parent').style.display='block';
-
-
-    //  document.getElementById('cash-out-parent').style.display='none';
-    //   document.getElementById('transfer-parent').style.display='none';
-    //    document.getElementById('bonus-parent').style.display='none';
-    //  //style
-    // document.getElementById('add-btn').style.border='1px solid blue';
-    //  document.getElementById('cash-out-btn').style.border='1px solid  rgba(169, 169, 169, 0.3)';
-    // document.getElementById('add-text').style.color='blue';
-    //  document.getElementById('cash-out-text').style.color=' #9ca3af';
+handleToggle('add-money-parent')
+    
        
 })
 
 
 document.getElementById('cash-out-btn').addEventListener('click',function () {
     
- const forms=document.getElementsByClassName('form');
-        for (const form  of forms) {
-          // console.log(form);
-          form.style.display='none';
-          
-        }
-    document.getElementById('cash-out-parent').style.display='block';
+
     
-    
+    handleToggle('cash-out-parent')
 })
 
 
 document.getElementById('transfer-btn').addEventListener('click',function(){
    
-   const forms=document.getElementsByClassName('form');
-        for (const form  of forms) {
-          // console.log(form);
-          form.style.display='none';
+  
           
-        }
-            document.getElementById('transfer-parent').style.display='block';
-          
-      //style
+      handleToggle('transfer-parent');
 
 
 
 });
 
 document.getElementById('get-bonus-btn-parent').addEventListener('click',function(){
-    const forms=document.getElementsByClassName('form');
-        for (const form  of forms) {
-          // console.log(form);
-          form.style.display='none';
-          
-        }
-            document.getElementById('bonus-parent').style.display='block';
+   
             
-      //style
+     handleToggle('bonus-parent')
 
 
 
 });
 
 document.getElementById('pay-bill-btn').addEventListener('click',function(){
-    const forms=document.getElementsByClassName('form');
-        for (const form  of forms) {
-          // console.log(form);
-          form.style.display='none';
-          
-        }
-            document.getElementById('pay-bill-parent').style.display='block';
+ 
          
-    
+    handleToggle('pay-bill-parent')
       //style
 
 
@@ -254,13 +236,7 @@ document.getElementById('pay-bill-btn').addEventListener('click',function(){
 
 document.getElementById('transaction-btn')
 .addEventListener('click',function(){
-    const forms=document.getElementsByClassName('form');
-        for (const form  of forms) {
-          // console.log(form);
-          form.style.display='none';
-          
-        }
-        document.getElementById('transaction-parent').style.display='block';
+   handleToggle('transaction-parent')
 
         const transactionContainer=document.
         getElementById('transaction-container');
