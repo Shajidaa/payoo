@@ -37,6 +37,9 @@ btn.addEventListener('click',function (e) {
 
     const pinNum=getInputValueNumber('pin');
     const availableAmount=getInnerText('available-amount');
+    if (addMoney<=0) {
+     return alert('Invalid amount')
+    }
     if (accountNum.length < 11 ) {
         alert('Please provide valid account number');
         return;
@@ -81,6 +84,9 @@ document.getElementById('withdraw-btn').addEventListener('click',function () {
     if (validPin !== pinNum) {
         alert('Incorrect Pin Number');
         return;
+    }
+    if (withdrawAmount<=0 || withdrawAmount<availableAmount) {
+      return alert('Invalid amount')
     }
     //cALCULATION
     const afterWithdrawNewAvailableAmount=availableAmount-withdrawAmount;
