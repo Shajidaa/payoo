@@ -1,6 +1,7 @@
 const btn=document.getElementById('add-money-btn');
 
 const validPin=1234;
+const transaction =[];
 
 
 // function to get input values
@@ -51,7 +52,16 @@ btn.addEventListener('click',function (e) {
     const newAvailableAmount=availableAmount+addMoney;
    
   //  document.getElementById('available-amount').innerText=newAvailableAmount; 
-   setInnerText(newAvailableAmount)
+   setInnerText(newAvailableAmount);
+
+   const data={
+name:'Add Money',
+time:new Date().toLocaleTimeString(),
+   }
+   transaction.push(data)
+  //  console.log(transaction);
+   
+   
 })
 
 
@@ -79,7 +89,13 @@ document.getElementById('withdraw-btn').addEventListener('click',function () {
    console.log(afterWithdrawNewAvailableAmount);
    
   //  document.getElementById('available-amount').innerText=afterWithdrawNewAvailableAmount;
-  setInnerText(afterWithdrawNewAvailableAmount)
+  setInnerText(afterWithdrawNewAvailableAmount);
+  
+   const data={
+name:'Cash Out Money',
+time:new Date().toLocaleTimeString(),
+   }
+   transaction.push(data)
 })
 
 
@@ -103,6 +119,12 @@ document.getElementById('send-now-btn').addEventListener('click',function(){
    
   //  document.getElementById('available-amount').innerText=afterSendMoneyAvailableAmount;
   setInnerText(afterSendMoneyAvailableAmount);
+  
+   const data={
+name:'Transfer Money',
+time:new Date().toLocaleTimeString(),
+   }
+   transaction.push(data)
 })
 
 
@@ -127,7 +149,13 @@ document.getElementById('pay-btn').addEventListener('click',function(){
      console.log(payAmount);
    
   //  document.getElementById('available-amount').innerText=payAmount;
-  setInnerText(payAmount)
+  setInnerText(payAmount);
+  
+   const data={
+name:'Pay Money',
+time:new Date().toLocaleTimeString(),
+   }
+   transaction.push(data)
 })
 
 
@@ -135,7 +163,6 @@ document.getElementById('pay-btn').addEventListener('click',function(){
 //toggling 
 
 document.getElementById('add-btn').addEventListener('click',function (e) {
-       
         const forms=document.getElementsByClassName('form');
         for (const form  of forms) {
           // console.log(form);
@@ -144,6 +171,8 @@ document.getElementById('add-btn').addEventListener('click',function (e) {
         }
 
     document.getElementById('add-money-parent').style.display='block';
+
+
     //  document.getElementById('cash-out-parent').style.display='none';
     //   document.getElementById('transfer-parent').style.display='none';
     //    document.getElementById('bonus-parent').style.display='none';
@@ -164,10 +193,6 @@ document.getElementById('cash-out-btn').addEventListener('click',function () {
           form.style.display='none';
           
         }
-
-
-
-
     document.getElementById('cash-out-parent').style.display='block';
     
     
@@ -221,17 +246,40 @@ document.getElementById('pay-bill-btn').addEventListener('click',function(){
 
 });
 
-document.getElementById('transaction-btn').addEventListener('click',function(){
+document.getElementById('transaction-btn')
+.addEventListener('click',function(){
     const forms=document.getElementsByClassName('form');
         for (const form  of forms) {
           // console.log(form);
           form.style.display='none';
           
         }
-            document.getElementById('transaction-parent').style.display='block';
+        document.getElementById('transaction-parent').style.display='block';
+
+        const transactionContainer=document.
+        getElementById('transaction-container');
+
+        transactionContainer.innerText='';
+        for (const data  of transaction) {
+          const div=document.createElement('div')
+          div.innerHTML=`
+          <div class="flex justify-between items-center bg-white p-2 rounded-xl">
+          <div class="flex gap-3">
+            <div class="rounded-[50%] bg-[#F4F5F7] p-2">
+              <img src="./assets/wallet1.png" alt="" />
+            </div>
+            <div class="">
+              <h1 class="text-sm text-black font-semibold">${data.name}</h1>
+              <p class="text-gray-400 text-[12px]">${data.time}</p>
+            </div>
+          </div>
+          <div><i class="fa-solid fa-ellipsis-vertical"></i></div>
+        </div>`
+
+        transactionContainer.appendChild(div)
+        }
          
     
-      //style
 
 
 
