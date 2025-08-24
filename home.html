@@ -55,7 +55,7 @@
           id="add-btn"
           class="border-2 border-gray-100 p-3 rounded-xl flex-col justify-center items-center"
         >
-          <img src="./assets/wallet1.png" class="mx-auto" alt="" />
+          <img src="./assets/wallet1.png" class="mx-auto size-6" alt="" />
           <p
             id="add-text"
             class="font-normal text-[14px] text-gray-400 text-center"
@@ -108,6 +108,7 @@
         </div>
         <!-- card -->
         <div
+          id="transaction-btn"
           class="border-2 border-gray-100 p-3 rounded-xl flex-col justify-center items-center"
         >
           <img src="./assets/transaction1.png" class="mx-auto" alt="" />
@@ -119,7 +120,7 @@
     </section>
     <div class="all-from-sections max-w-[350px] mx-auto p-3">
       <!-- add-money -->
-      <section id="add-money-parent" class="hidden">
+      <section class="form" id="add-money-parent">
         <h1 class="max-w-[350px] text-xl mt-5 mb-5 font-semibold text-black">
           Add Money
         </h1>
@@ -174,7 +175,7 @@
         </div>
       </section>
       <!-- cash out -->
-      <section id="cash-out-parent" class="hidden max-w-[350px]">
+      <section class="form hidden max-w-[350px]" id="cash-out-parent">
         <h1 class="text-xl mt-5 mb-5 font-semibold text-black">Cash Out</h1>
         <div class="bg-white rounded-xl p-3">
           <fieldset class="fieldset mt-3">
@@ -214,7 +215,7 @@
       </section>
 
       <!-- Transfer Money -->
-      <section id="transfer-parent" class="max-w-[350px] hidden">
+      <section class="form max-w-[350px] hidden" id="transfer-parent">
         <h1 class="text-xl mt-5 mb-5 font-semibold text-black">
           Transfer Money
         </h1>
@@ -258,7 +259,7 @@
       </section>
 
       <!-- get Bonus -->
-      <section id="bonus-parent" class="max-w-[350px] hidden">
+      <section class="form max-w-[350px] hidden" id="bonus-parent">
         <h1 class="text-xl mt-5 mb-5 font-semibold text-black">Get Bonus</h1>
         <div class="bg-white rounded-xl p-3">
           <fieldset class="fieldset mt-3">
@@ -282,7 +283,7 @@
         </div>
       </section>
       <!-- Pay Bill -->
-      <section id="pay-bill-parent" class="hidden">
+      <section class="form hidden" id="pay-bill-parent">
         <!-- <section id="add-money-parent" > -->
         <h1 class="max-w-[350px] text-xl mt-5 mb-5 font-semibold text-black">
           Pay Bill
@@ -341,6 +342,49 @@
         </div>
       </section>
       <!-- transaction -->
+      <section class="form hidden" id="transaction-parent">
+        <!-- <section id="add-money-parent" > -->
+        <h1 class="max-w-[350px] text-xl mt-5 mb-5 font-semibold text-black">
+          transaction
+        </h1>
+        <div class="bg-white rounded-xl p-3">
+          <fieldset class="fieldset mt-3">
+            <legend class="fieldset-legend text-base">
+              Biller Account Number
+            </legend>
+            <input
+              type="text"
+              class="input text-gray-400 bg-[#F4F5F7] rounded-2xl w-[95%]"
+              id="biller-account-num"
+              placeholder="Enter account number"
+            />
+          </fieldset>
+          <fieldset class="fieldset mt-3">
+            <legend class="fieldset-legend text-base">Amount to pay</legend>
+            <input
+              type="text"
+              class="input text-gray-400 bg-[#F4F5F7] rounded-2xl w-[95%]"
+              placeholder="Add Amount to pay"
+              id="pay-money"
+            />
+          </fieldset>
+          <fieldset class="fieldset mt-3">
+            <legend class="fieldset-legend text-base">Pin Number</legend>
+            <input
+              id="pin-pay"
+              type="password"
+              class="input text-gray-400 bg-[#F4F5F7] rounded-2xl w-[95%]"
+              placeholder="Enter 4 digit pin number"
+            />
+          </fieldset>
+          <button
+            id="pay-btn"
+            class="btn mt-5 mb-5 w-[95%] text-white bg-[#0874F2] rounded-2xl"
+          >
+            Pay Now
+          </button>
+        </div>
+      </section>
     </div>
     <script src="./home.js"></script>
   </body>
