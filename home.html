@@ -26,8 +26,15 @@
       href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
       rel="stylesheet"
     />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+    </style>
   </head>
-  <body class="bg-[#F4F5F7] h-[100%] mx-auto font-[outfit]">
+  <body
+    class="bg-[#F4F5F7] h-[100%] md:max-w-[350px] max-w-full mx-auto font-[outfit]"
+  >
     <nav
       class="bg-white pb-2 md:max-w-[350px] max-w-full mx-auto p-3 border-b-1 border-b-gray-300 flex justify-between items-center"
     >
@@ -56,11 +63,11 @@
         low and
       </p>
       <!-- cards -->
-      <div class="mt-5 rounded-b-2xl grid grid-cols-3 gap-5 pb-5">
+      <div class="mt-5 rounded-b-2xl grid grid-cols-3 gap-2 pb-5">
         <!-- card -->
         <div
           id="add-btn"
-          class="form-btn border-2 border-gray-100 p-3 rounded-xl flex-col justify-center items-center"
+          class="form-btn min-h-[90px] border-2 border-gray-100 p-3 rounded-xl flex-col justify-center items-center"
         >
           <img src="./assets/wallet1.png" class="mx-auto size-6" alt="" />
           <p
@@ -73,7 +80,7 @@
         <!-- card -->
         <div
           id="cash-out-btn"
-          class="form-btn border-2 border-gray-100 p-3 rounded-xl flex-col justify-center items-center"
+          class="min-h-[90px] form-btn border-2 border-gray-100 p-3 rounded-xl flex-col justify-center items-center"
         >
           <img src="./assets/send1.png" class="mx-auto" alt="" />
           <p
@@ -86,7 +93,7 @@
         <!-- card -->
         <div
           id="transfer-btn"
-          class="form-btn border-2 border-gray-100 p-3 rounded-xl flex-col justify-center items-center"
+          class="min-h-[90px] form-btn border-2 border-gray-100 p-3 rounded-xl flex-col justify-center items-center"
         >
           <img src="./assets/money1.png" class="mx-auto" alt="" />
           <p class="font-normal text-[14px] text-gray-400 text-center">
@@ -96,7 +103,7 @@
         <!-- card -->
         <div
           id="get-bonus-btn-parent"
-          class="form-btn border-2 border-gray-100 p-3 rounded-xl flex-col justify-center items-center"
+          class="min-h-[90px] form-btn border-2 border-gray-100 p-3 rounded-xl flex-col justify-center items-center"
         >
           <img src="./assets/bonus1.png" class="mx-auto" alt="" />
           <p class="font-normal text-[14px] text-gray-400 text-center">
@@ -106,7 +113,7 @@
         <!-- card -->
         <div
           id="pay-bill-btn"
-          class="form-btn border-2 border-gray-100 p-3 rounded-xl flex-col justify-center items-center"
+          class="form-btn min-h-[90px] border-2 border-gray-100 p-3 rounded-xl flex-col justify-center items-center"
         >
           <img src="./assets/purse1.png" class="mx-auto" alt="" />
           <p class="font-normal text-[14px] text-gray-400 text-center">
@@ -116,7 +123,7 @@
         <!-- card -->
         <div
           id="transaction-btn"
-          class="form-btn border-2 border-gray-100 p-3 rounded-xl flex-col justify-center items-center"
+          class="form-btn min-h-[90px] border-2 border-gray-100 p-3 rounded-xl flex-col justify-center items-center"
         >
           <img src="./assets/transaction1.png" class="mx-auto" alt="" />
           <p class="font-normal text-[14px] text-gray-400 text-center">

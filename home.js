@@ -5,7 +5,7 @@ document.getElementById(' log-out-btn')
       window.location.href='./index.html'
 })
 
-
+ 
 const validPin=1234;
 const transaction =[];
 
@@ -192,26 +192,25 @@ document.getElementById('add-btn').addEventListener('click',function (e) {
     
 
 handleToggle('add-money-parent')
-    
-       
+
+const formBtns=document.getElementsByClassName('form-btn')
+    for (const btn  of formBtns) {
+      btn.classList.remove(' border-gray-100')
+    }
+       document.getElementById('add-btn').classList.remove(' border-gray-100')
+       document.getElementById('add-btn').classList.add('border-2 border-[#000000]')
 })
 
 
 document.getElementById('cash-out-btn').addEventListener('click',function () {
-    
-
-    
+  
     handleToggle('cash-out-parent')
 })
 
 
 document.getElementById('transfer-btn').addEventListener('click',function(){
-   
-  
-          
+      
       handleToggle('transfer-parent');
-
-
 
 });
 
@@ -220,16 +219,12 @@ document.getElementById('get-bonus-btn-parent').addEventListener('click',functio
             
      handleToggle('bonus-parent')
 
-
-
 });
 
 document.getElementById('pay-bill-btn').addEventListener('click',function(){
  
          
     handleToggle('pay-bill-parent')
-      //style
-
 
 
 });
